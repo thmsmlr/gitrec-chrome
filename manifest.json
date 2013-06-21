@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Gitrec",
+  "description": "This extension adds repository recommendations to Github",
+  "version": "0.1",
+  "icons" : {
+    "128" : "gitrec-icon.png"
+  },
+  "content_scripts" : [
+    {
+      "matches" : ["https://github.com/*/*"],
+      "js" : ["jquery.js", "gitrec.js"]
+    }
+  ]
+}
