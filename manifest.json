@@ -7,10 +7,20 @@
   "icons" : {
     "128" : "gitrec-icon.png"
   },
+  "web_accessible_resources": [
+    "templates/*"
+  ],
   "content_scripts" : [
     {
-      "matches" : ["https://github.com/*/*"],
-      "js" : ["jquery.js", "gitrec.js"]
+      "matches" : ["https://github.com/*"],
+      "js" : [
+        "js/lib/jquery.js",
+        "js/lib/underscore.js",
+        "js/gitrec/gitrec.js",
+        "js/gitrec/pagechecker.js",
+        "js/gitrec/templator.js",
+        "js/controller.js"
+      ]
     }
   ]
 }
