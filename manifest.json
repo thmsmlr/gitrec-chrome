@@ -10,6 +10,9 @@
   "web_accessible_resources": [
     "templates/*"
   ],
+  "permissions": [
+    "http://gitrec.m0rtardata.com/"
+  ],
   "content_scripts" : [
     {
       "matches" : ["https://github.com/*"],
@@ -19,7 +22,11 @@
         "js/gitrec/gitrec.js",
         "js/gitrec/pagechecker.js",
         "js/gitrec/templator.js",
+        "js/gitrec/api.js",
         "js/controller.js"
+      ],
+      "css" : [
+        "css/gitrec.css"
       ]
     }
   ]

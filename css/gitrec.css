@@ -1,0 +1,18 @@
+.recommendations h4 {
+  text-align:center;
+}
+.grid.recommendations .col {
+  padding:0 !important;
+}
+.recommendations .col:first-child {
+  border-right: 1px solid rgb(221, 221, 221);
+}
+.gitrec-recommendations {
+  border-top: 1px solid rgb(221, 221, 221);
+  text-align:center;
+}
+body.page-profile .box-header .octicon-repo-clone {
+  margin-top: 8px;
+  margin-right: 10px;
+  color: rgb(153, 153, 153);
+}

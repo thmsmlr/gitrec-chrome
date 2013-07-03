@@ -28,6 +28,7 @@ var Gitrec = Gitrec || {};
      */
     var TEMPLATES = {
       'repo_button' : new template_getter('templates/button.html'),
+      'user_recommendations' : new template_getter('templates/user_recommendations.html')
     };
 
     return {
@@ -36,6 +37,7 @@ var Gitrec = Gitrec || {};
        */
       TEMPLATES : {
         REPO_BUTTON : 'repo_button',
+        USER_RECOMMENDATIONS : 'user_recommendations'
       },
 
       /**
@@ -48,9 +50,8 @@ var Gitrec = Gitrec || {};
        */
       get : function(template_name, callback) {
         TEMPLATES[template_name](callback);
-      }
-
-    }
+      },
+    };
   })();
 })(Gitrec);
 
