@@ -16,3 +16,13 @@ body.page-profile .box-header .octicon-repo-clone {
   margin-right: 10px;
   color: rgb(153, 153, 153);
 }
+.box .powered-by-gitrec {
+  font-size: 12px;
+  margin: 10px;
+  color: rgb(153, 153, 153);
+}
+.powered-by-gitrec {
+  font-weight:bold;
+  float:right;
+  margin:4px 0;
+}

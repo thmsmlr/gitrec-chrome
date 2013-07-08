@@ -23,7 +23,7 @@ var Gitrec = Gitrec || {};
       'user_page' : function() {
         var requirements = [
           (document.location.pathname.split("/").length == 2),
-          ($('[data-user]').length != 0)
+          ($('[data-name]').length != 0)
         ];
         return requirements.every(function(o) { return o == true });
       },

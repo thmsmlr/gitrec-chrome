@@ -27,8 +27,10 @@ var Gitrec = Gitrec || {};
      * Enumeration of all templates available
      */
     var TEMPLATES = {
-      'repo_button' : new template_getter('templates/button.html'),
-      'user_recommendations' : new template_getter('templates/user_recommendations.html')
+      'user_recommendations' : new template_getter('templates/user_recommendations.html'),
+      'repo_recommendations' : new template_getter('templates/repo_recommendations.html'),
+      'repo_recommendations_error' : new template_getter('templates/repo_recommendations_error.html'),
+      'repo_tab' : new template_getter('templates/tab.html')
     };
 
     return {
@@ -36,8 +38,10 @@ var Gitrec = Gitrec || {};
        * Template enum
        */
       TEMPLATES : {
-        REPO_BUTTON : 'repo_button',
-        USER_RECOMMENDATIONS : 'user_recommendations'
+        USER_RECOMMENDATIONS : 'user_recommendations',
+        REPO_RECOMMENDATIONS : 'repo_recommendations',
+        REPO_RECOMMENDATIONS_ERROR : 'repo_recommendations_error',
+        REPO_TAB : 'repo_tab'
       },
 
       /**

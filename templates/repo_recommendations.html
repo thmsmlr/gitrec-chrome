@@ -1,0 +1,39 @@
+<div class="gitrec-repo-recommendations">
+  <div class="powered-by-gitrec">Powered by <a href="http://gitrec.mortardata.com/">Gitrec</a></div>
+  <h2>Similar Repositories</h2>
+  <ul class="repolist">
+    <% _.each(recommendations, function(recommendation) { %>
+      <li class="public source">
+        <ul class="repo-stats">
+          <li class="language"><%= recommendation.language %></li>
+          <li class="stargazers">
+            <a href="/<%= recommendation.name %>/stargazers" title="Stargazers" class="">
+              <span class="octicon octicon-star"></span> <%= recommendation.stars %>
+            </a>
+          </li>
+          <li class="forks">
+            <a href="/<%= recommendation.name %>/network" title="Forks">
+              <span class="octicon octicon-git-branch"></span> <%= recommendation.forks %>
+            </a>
+          </li>
+        </ul>
+
+        <span class="repolist-icon">
+          <span class="mega-octicon octicon-repo"></span>
+        </span>
+
+        <h3 class="repolist-name">
+          <a href="/<%= recommendation.name %>"><%= recommendation.name %></a>
+        </h3>
+
+
+        <div class="body">
+            <p class="description">
+              <%= recommendation.description %>
+            </p>
+        </div><!-- /.body -->
+      </li>
+
+    <% }); %>
+  </ul>
+</div>
