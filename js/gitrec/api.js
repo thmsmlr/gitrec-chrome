@@ -2,7 +2,7 @@ var Gitrec = Gitrec || {};
 
 (function() {
   Gitrec.Api = (function() {
-    var GITREC_HOST = "http://gitrec.m0rtardata.com";
+    var GITREC_HOST = "http://gitrec.mortardata.com";
 
     var default_handler = function(callback, error_callback) {
       return function(data) {

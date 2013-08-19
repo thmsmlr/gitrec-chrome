@@ -4,6 +4,7 @@
   "name": "Gitrec",
   "description": "This extension adds repository recommendations to Github",
   "version": "0.1",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "icons" : {
     "128" : "gitrec-icon.png"
   },
@@ -11,7 +12,7 @@
     "templates/*"
   ],
   "permissions": [
-    "http://gitrec.m0rtardata.com/"
+    "http://gitrec.mortardata.com/"
   ],
   "content_scripts" : [
     {
@@ -23,11 +24,16 @@
         "js/gitrec/pagechecker.js",
         "js/gitrec/templator.js",
         "js/gitrec/api.js",
+        "js/gitrec/analytics.js",
         "js/controller.js"
       ],
       "css" : [
         "css/gitrec.css"
       ]
     }
-  ]
+  ],
+  "background" : {
+    "scripts" : ["analytics/analytics.js"],
+    "persistent" : false
+  }
 }

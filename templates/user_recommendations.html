@@ -1,63 +1,51 @@
-<div class="box box-small">
-  <div class="box-header">
-    <span class="octicon octicon-repo-clone tooltipped upwards right" original-title="Includes contributions from private repositories you can access.">
-    </span>
-    <div class="powered-by-gitrec">Powered by <a href="http://gitrec.mortardata.com/">Gitrec</a></div>
-    <h3 class="box-title">
-      Gitrec Recommended Repos
-    </h3>
+<div class="grid recommendations">
+  <div class="col interest-recommendations">
+    <h4>Based on watches and forks</h4>
+    <ul class="repo-list">
+      <% _.each(interest_recommendations, function(recommendation, index) { %>
+        <% if(index < 4) { %>
+          <li class="public source">
+            <a href="/<%= recommendation.name %>" class="repo-list-item css-truncate">
+              <span class="repo-icon octicon octicon-repo"></span>
+              <span class="repo-and-owner css-truncate-target">
+                <span class="repo" title="gitrec-chrome"><%= recommendation.name %></span>
+              </span>
+              <span class="stars">
+                <%= recommendation.stars %>
+                <span class="octicon octicon-star"></span>
+              </span>
+              <span class="repo-description css-truncate-target"><%= recommendation.description %></span>
+            </a>
+          </li>
+        <% } %>
+      <% }); %>
+    </ul>
   </div>
-  <div class="box-body">
-    <div class="grid recommendations">
-      <div class="col interest-recommendations">
-        <h4>Based on watches and forks</h4>
-        <ul class="repo-list">
-          <% _.each(interest_recommendations, function(recommendation, index) { %>
-            <% if(index < 4) { %>
-              <li class="public source">
-                <a href="/<%= recommendation.name %>" class="repo-list-item css-truncate">
-                  <span class="repo-icon octicon octicon-repo"></span>
-                  <span class="repo-and-owner css-truncate-target">
-                    <span class="repo" title="gitrec-chrome"><%= recommendation.name %></span>
-                  </span>
-                  <span class="stars">
-                    <%= recommendation.stars %>
-                    <span class="octicon octicon-star"></span>
-                  </span>
-                  <span class="repo-description css-truncate-target"><%= recommendation.description %></span>
-                </a>
-              </li>
-            <% } %>
-          <% }); %>
-        </ul>
-      </div>
-      <div class="col contribution-recommendations">
-        <h4>Based on contributions</h4>
-        <ul class="repo-list">
-          <% _.each(contribution_recommendations, function(recommendation, index) { %>
-            <% if(index < 4) { %>
-              <li class="public source">
-                <a href="/<%= recommendation.name %>" class="repo-list-item css-truncate">
-                  <span class="repo-icon octicon octicon-repo"></span>
-                  <span class="repo-and-owner css-truncate-target">
-                    <span class="repo" title="gitrec-chrome"><%= recommendation.name %></span>
-                  </span>
-                  <span class="stars">
-                    <%= recommendation.stars %>
-                    <span class="octicon octicon-star"></span>
-                  </span>
-                  <span class="repo-description css-truncate-target"><%= recommendation.description %></span>
-                </a>
-              </li>
-            <% } %>
-          <% }); %>
-        </ul>
-      </div>
-    </div>
-    <div class="gitrec-recommendations">
-      <a href="http://gitrec.mortardata.com/user/<%=username%>">
-        <h4>View All Recommendations</h4>
-      </a>
-    </div>
+  <div class="col contribution-recommendations">
+    <h4>Based on contributions</h4>
+    <ul class="repo-list">
+      <% _.each(contribution_recommendations, function(recommendation, index) { %>
+        <% if(index < 4) { %>
+          <li class="public source">
+            <a href="/<%= recommendation.name %>" class="repo-list-item css-truncate">
+              <span class="repo-icon octicon octicon-repo"></span>
+              <span class="repo-and-owner css-truncate-target">
+                <span class="repo" title="gitrec-chrome"><%= recommendation.name %></span>
+              </span>
+              <span class="stars">
+                <%= recommendation.stars %>
+                <span class="octicon octicon-star"></span>
+              </span>
+              <span class="repo-description css-truncate-target"><%= recommendation.description %></span>
+            </a>
+          </li>
+        <% } %>
+      <% }); %>
+    </ul>
   </div>
+</div>
+<div class="gitrec-recommendations">
+  <a class="gitrec-see-more" href="http://gitrec.mortardata.com/user/<%=username%>">
+    <h4>View All Recommendations</h4>
+  </a>
 </div>

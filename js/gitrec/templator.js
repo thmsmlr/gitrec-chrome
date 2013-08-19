@@ -27,6 +27,7 @@ var Gitrec = Gitrec || {};
      * Enumeration of all templates available
      */
     var TEMPLATES = {
+      'user_recommendation_shell' : new template_getter('templates/user_recommendation_shell.html'),
       'user_recommendations' : new template_getter('templates/user_recommendations.html'),
       'repo_recommendations' : new template_getter('templates/repo_recommendations.html'),
       'repo_recommendations_error' : new template_getter('templates/repo_recommendations_error.html'),
@@ -38,6 +39,7 @@ var Gitrec = Gitrec || {};
        * Template enum
        */
       TEMPLATES : {
+        USER_RECOMMENDATION_SHELL : 'user_recommendation_shell',
         USER_RECOMMENDATIONS : 'user_recommendations',
         REPO_RECOMMENDATIONS : 'repo_recommendations',
         REPO_RECOMMENDATIONS_ERROR : 'repo_recommendations_error',
