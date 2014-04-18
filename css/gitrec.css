@@ -1,6 +1,13 @@
 .recommendations h4 {
   text-align:center;
 }
+.grid.recommendations {
+  overflow:hidden;
+}
+.grid.recommendations .col {
+  float:left;
+  width: 50%;
+}
 .grid.recommendations .col {
   padding:0 !important;
 }

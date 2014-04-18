@@ -10,7 +10,7 @@ var Gitrec = Gitrec || {};
       'repo_page' : function() {
         var requirements = [
           (document.location.pathname.split("/").length > 2),
-          ($("meta[content='githubog:gitrepository']").length != 0),
+          ($("meta[name='octolytics-dimension-repository_public']").attr('content') == "true"),
           (!$(".repohead h1").hasClass("private"))
         ];
         return requirements.every(function(o) { return o == true });

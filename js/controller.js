@@ -9,9 +9,9 @@ var Gitrec = Gitrec || {};
     Gitrec.Analytics.recordEvent("RepoRec", "Page View - " + repository);
 
     Gitrec.Templator.get(Gitrec.Templator.TEMPLATES.REPO_TAB, function(repo_tab_string) {
-      $("ul.repo-menu").eq(1).prepend(_.template(repo_tab_string)());
+      $(".repository-sidebar ul").eq(1).prepend(_.template(repo_tab_string)());
 
-      $("li[original-title=Gitrec]").click(function(e) {
+      $("li[aria-label=GitRec]").click(function(e) {
         var _this = this;
 
         $("div.repository-with-sidebar.repo-container").addClass("with-full-navigation");
@@ -21,7 +21,7 @@ var Gitrec = Gitrec || {};
         Gitrec.Api.getRepoRecommendations(repository, function(recommendations) {
           Gitrec.Analytics.recordEvent("RepoRec", "Loaded - " + repository);
           // Make sure UI is updated
-          $("ul.repo-menu li a").removeClass("selected");
+          $(".repository-sidebar ul li a").removeClass("selected");
           $(_this).find("a").removeClass("is-loading");
           $(_this).find("a").addClass("selected");
           Gitrec.Templator.get(Gitrec.Templator.TEMPLATES.REPO_RECOMMENDATIONS,
